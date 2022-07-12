@@ -1,0 +1,72 @@
+.specials {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 3rem;
+
+    @include bp($tablet-bp){
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        gap: 0;
+
+        max-width: 37rem;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+}
+
+.special {
+    text-align: center;
+
+    width: 31%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+    
+    transition: transform 1s ease-in-out;
+
+    @include bp($laptop-bp){
+        width: 48%;
+    }
+
+    @include bp($tablet-bp){
+        width: 100%;
+        flex-shrink: 0;
+    }
+
+    // .special__img
+    &__img {
+        max-height: 32rem;
+
+        margin-bottom: 4rem;
+    }
+
+    // .special__header
+    &__header {
+        margin-bottom: 2rem;
+    }
+
+    // .special__title
+    &__title {
+        font-size: 1.8rem;
+        font-weight: 700;
+        line-height: 1.7;
+        letter-spacing: 0.025em;
+
+        color: $white;
+    }
+
+    // .special__desc
+    &__desc {
+        font-size: 1.4rem;
+        font-family: $font-secondary;
+        color: $secondary;
+        max-width: 32rem;
+
+        letter-spacing: 0.025em;
+    }
+}

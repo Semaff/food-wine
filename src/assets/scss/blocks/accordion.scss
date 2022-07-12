@@ -1,0 +1,141 @@
+.accordion {
+    width: 100%;
+    max-width: 770px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+
+    &.--disabled {
+        .accordion__item:last-child {
+            border: none;
+        }
+
+        .accordion__title {
+            padding-left: 0;
+
+            &::after,
+            &::before {
+                display: none;
+            }
+        }
+
+        .accordion__content {
+            display: block;
+            padding-left: 0;
+        }
+
+        .accordion__header {
+            padding-bottom: 2.5rem;
+        }
+    }
+
+    // .accordion__item
+    &__item {
+        padding: 3.5rem 0;
+        border-bottom: $border-primary;
+
+        &:first-child {
+            padding: 0 0 3.5rem;
+        }
+
+        &.--noborder {
+            border: none;
+        }
+
+        &.active {
+            .accordion__header {
+                padding-bottom: 2.5rem;
+            }
+
+            .accordion__title {
+                &::after {
+                    opacity: 0;
+                    transition: opacity .1s linear;
+                }
+            }
+
+            .accordion__content {
+                display: block;
+            }
+        }
+    }
+
+    // .accordion__header
+    &__header {
+        cursor: pointer;
+
+        &:hover {
+            .accordion__title::before,
+            .accordion__title::after {
+                background-color: $secondary;
+            }
+
+            .accordion__title {
+                color: darken($white, 10%);
+            }
+        }
+    }
+
+    // .accordion__title
+    &__title {
+        position: relative;
+
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: $white;
+
+        padding-left: 3rem;
+        transition: color .2s linear;
+
+        &::before,
+        &::after {
+            content: "";
+
+            position: absolute;
+            top: 50%;
+            left: 0;
+            z-index: 1;
+
+            width: 14px;
+            height: 2px;
+            background-color: $primary;
+
+            transition: background-color .2s linear;
+        }
+
+        &::after {
+            transform: rotate(90deg);
+        }
+
+        @include bp($mobile-bp){
+            font-size: 1.4rem;
+        }
+    }
+
+    // .accordion__content
+    &__content {
+        display: none;
+
+        font-size: 1.4rem;
+        line-height: 1.5;
+        color: $secondary;
+        padding-left: 3rem;
+        margin-top: 2rem;
+
+        @include bp($mobile-bp){
+            font-size: 1.2rem;
+            padding-left: 0;
+        }
+    }
+}
+
+.accordion__link {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: $primary;
+
+    &:hover {
+        text-decoration: none;
+    }
+}

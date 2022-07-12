@@ -1,0 +1,65 @@
+.vacancies {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    gap: 3rem;
+}
+
+.vacancy {
+    cursor: pointer;
+
+    width: 48%;
+    padding: 3.5rem 5rem 4.5rem;
+
+    text-align: center;
+    background-color: #000;
+    border: 1px solid #343434;
+
+    transition: background-color 0.2s linear;
+
+    &:hover {
+        background-color: $primary;
+
+        .vacancy__number,
+        .vacancy__title,
+        .vacancy__text {
+            color: #000;
+            transition: color 0.2s linear;
+        }
+    }
+
+    @include bp($tablet-bp){
+        width: 95%;
+        padding: 3.5rem 1rem 4.5rem;
+
+        .vacancy__title {
+            margin: 1rem 0;
+        }
+    }
+
+    // .vacancy__number
+    &__number {
+        font-size: 1.8rem;
+        color: $secondary;
+    }
+
+    // .vacancy__title
+    &__title {
+        font-size: 1.8rem;
+        font-weight: 700;
+
+        line-height: 1.5;
+        color: $primary;
+
+        margin: 3rem 0;
+    }
+
+    // .vacancy__text
+    &__text {
+        font-size: $fz-secondary;
+        font-family: $font-secondary;
+        line-height: 1.5;
+        color: $secondary;
+    }
+}

@@ -1,0 +1,89 @@
+.logo {
+    position: relative;
+    text-align: center;
+
+    width: 100%;
+
+    &.--footer {
+        max-width: 22rem;
+
+        .logo__header {
+            padding-top: 8rem;
+        }
+
+        .logo__title {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        @include bp($medium-bp){
+            max-width: none;
+        }
+    }
+}
+
+.logo__img {
+    z-index: -1;
+    margin: 0 auto;
+}
+
+.logo__line {
+    display: block;
+    width: 100%;
+    max-width: 30rem;
+    height: 1px;
+
+    background: linear-gradient(to left, #2e2d2c, $primary, #2e2d2c);
+
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: 1;
+
+    transform: translateX(-50%);
+}
+
+.logo__header {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    width: 100%;
+    padding-top: 6rem;
+}
+
+.logo__container {
+    flex-shrink: 0;
+}
+
+.logo__title {
+    font-size: $fz-primary;
+    color: $white;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    letter-spacing: 0.2em;
+
+    @include bp($mobile-bp){
+        font-size: 2.2rem;
+    }
+}
+
+.logo__subtitle {
+    font-size: $fz-secondary;
+    font-family: $font-secondary;
+    font-weight: 400;
+    color: $secondary;
+    text-transform: uppercase;
+
+    letter-spacing: 0.2em;
+
+    @include bp($mobile-bp){
+        font-size: 1rem;
+    }
+}

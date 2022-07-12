@@ -1,0 +1,139 @@
+.intro {
+    position: relative;
+}
+
+.intro__inner {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.intro__header {
+    text-align: center;
+    padding: 170px 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    gap: 10px;
+
+    &.--extended {
+        padding: 150px 0 0;
+
+        @include bp($tablet-bp){
+            padding-top: 100px;
+        }
+    }
+
+    @include bp($tablet-bp){
+        padding: 120px 0;
+    }
+}
+
+.intro__title {
+    position: relative;
+
+    flex-shrink: 0;
+    font-weight: 700;
+    font-size: 3rem;
+    color: $white;
+
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+
+    @include bp($tablet-bp){
+        max-width: 30rem;
+    }
+}
+
+.intro__subtitle {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    z-index: 1;
+
+    width: 474px;
+
+    font-size: 1.4rem;
+    font-family: "Merriweather Sans", sans-serif;
+    font-weight: 300;
+
+    text-transform: uppercase;
+    color: $white;
+    line-height: 1.8;
+    letter-spacing: 0.15em;
+
+    transform: translateX(-50%);
+
+    @include bp($mobile-bp){
+        width: 300px;
+        font-size: 1.2rem;
+    }
+}
+
+// Intro Reservation
+.intro__reservation {
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 180px;
+    margin: 100px auto 165px;
+
+    img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 1;
+
+        transform: translate(-50%, -50%);
+    }
+
+    &:hover {
+        p {
+            color: darken($primary, 10%);
+        }
+
+        span {
+            border-color: darken($primary, 10%);
+        }
+    }
+}
+
+.intro__reservation-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-direction: column;
+
+    p {
+        font-weight: 700;
+        font-size: 1.8rem;
+        line-height: 1.3;
+
+        max-width: 120px;
+        color: $primary;
+
+        transition: color 0.2s linear;
+    }
+}
+
+.intro__order {
+    display: flex;
+    justify-content: space-around;
+
+    max-width: 730px;
+    margin: 0 auto;
+
+    .decoration__line {
+        background: $primary;
+    }
+}

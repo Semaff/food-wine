@@ -1,0 +1,187 @@
+// Text
+.--center {
+    text-align: center;
+}
+
+.--tal {
+    text-align: left;
+}
+
+.--ttu {
+    text-transform: uppercase;
+}
+
+// Video
+.embed,
+.fr-video {
+    display: block;
+    position: relative;
+    overflow: hidden;
+
+    &:before {
+        content: "";
+        display: block;
+        padding-top: 56.25%; // 9/16 (for 16/9)
+    }
+
+    iframe, video, object, embed {
+        width: 100%;
+        height: 100%;
+        
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+}
+
+// Borders
+.--border-sm {
+    padding-bottom: 3rem;
+    border-bottom: 1px solid rgba($white, 0.1);
+}
+
+// Transformation
+.--rotate {
+    transform: rotate(180deg);
+}
+
+.--fs0 {
+    flex-shrink: 0;
+}
+
+.--jcc {
+    justify-content: center;
+}
+
+// Max Width
+.--mw770 {
+    max-width: 77rem;
+}
+
+.--mw600 {
+    max-width: 60rem;
+}
+
+.--mw300 {
+    max-width: 30rem;
+}
+
+.--mw200 {
+    max-width: 20rem;
+}
+
+.--mw100 {
+    max-width: 10rem;
+}
+
+.--mw60 {
+    max-width: 6rem;
+}
+
+// Custom List Decoration
+.--list-deco {
+    width: fit-content;
+    position: relative;
+    margin-left: 1.5em;
+
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: $primary;
+    line-height: 1.5;
+    letter-spacing: 0.15em;
+
+    @include bp($mobile-bp) {
+        font-size: 1.6rem;
+    }
+
+    &.--extramargin {
+        margin-left: 3.5em;
+    }
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        left: -1.5em;
+        top: 50%;
+
+        width: 8px;
+        height: 8px;
+        background-color: $primary;
+
+        transform: rotate(45deg) translateY(-80%);
+    }
+
+    &.--mini {
+        &::after {
+            width: 7px;
+            height: 7px;
+        }
+    }
+
+    &.--grey {
+        font-size: 1.4rem;
+        letter-spacing: normal;
+        font-family: $font-secondary;
+        color: $secondary;
+
+        &::after {
+            background-color: $secondary;
+        }
+    }
+
+    &.--text {
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    &.--white {
+        font-weight: 700;
+        color: $white;
+
+        &::after {
+            background-color: $white;
+        }
+    }
+}
+
+// Pseudo-Decoration Blocks
+.arrow {
+    display: block;
+    width: 8px;
+    height: 8px;
+
+    border-right: 2px solid $primary;
+    border-bottom: 2px solid $primary;
+    transform: rotate(45deg);
+
+    transition: color 0.2s linear;
+
+    &.--medium {
+        width: 15px;
+        height: 15px;
+    }
+}
+
+.rectangle {
+    display: block;
+    background-color: $secondary;
+
+    width: 8px;
+    height: 8px;
+
+    transform: rotate(45deg);
+
+    &.--section {
+        margin: 30px auto 0;
+    }
+
+    &.--gold {
+        background-color: $primary;
+    }
+}

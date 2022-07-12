@@ -1,6 +1,4 @@
 _SourceFiles
 node_modules
 
-gulp
-src
-gulpfile.js
+dist

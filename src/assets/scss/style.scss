@@ -1,0 +1,84 @@
+@import "./mixins";
+@import "./vars";
+@import "./helper";
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    background: $bg-primary;
+    margin: 0;
+    padding: 0;
+
+    font-family: "Merriweather", serif;
+}
+
+html {
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+address,
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.main {
+    overflow: hidden
+}
+
+@import "./blocks/container";
+@import "./blocks/rhombus";
+@import "./blocks/header";
+@import "./blocks/contacts";
+@import "./blocks/decoration";
+@import "./blocks/burger";
+@import "./blocks/nav";
+@import "./blocks/subnav";
+@import "./blocks/intro";
+@import "./blocks/btn";
+@import "./blocks/slider";
+@import "./blocks/section";
+@import "./blocks/menu";
+@import "./blocks/table";
+@import "./blocks/board";
+@import "./blocks/stats";
+@import "./blocks/directions";
+@import "./blocks/reviews";
+@import "./blocks/map";
+@import "./blocks/footer";
+@import "./blocks/logo";
+@import "./blocks/history";
+@import "./blocks/person";
+@import "./blocks/socials";
+@import "./blocks/quality";
+@import "./blocks/count";
+@import "./blocks/form";
+@import "./blocks/team";
+@import "./blocks/join-us";
+@import "./blocks/vacancies";
+@import "./blocks/gallery";
+@import "./blocks/accordion";
+@import "./blocks/partners";
+@import "./blocks/prices";
+@import "./blocks/specials";
+@import "./blocks/site-map";
+@import "./blocks/blog";
+@import "./blocks/post";
+@import "./blocks/comments";
+@import "./blocks/popup";
+

@@ -1,0 +1,76 @@
+.stats {
+    position: relative;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+
+    user-select: none;
+    margin: 50px 0;
+
+    @include bp($laptop-bp) {
+        gap: 60px;
+    }
+
+    @include bp($tablet-bp) {
+        height: 130px;
+    }
+}
+
+.stat {
+    @include bp($tablet-bp) {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        transition: all 300ms ease-in-out;
+        z-index: -1;
+        opacity: 0;
+
+        &.active {
+            opacity: 1;
+            z-index: 99;
+            box-shadow: 0px 0px 105px -35px rgba(0, 0, 0, 0.75);
+        }
+
+        &.prev {
+            z-index: 0;
+            opacity: 0.25;
+            transform: translate(-125%, -50%);
+        }
+
+        &.next {
+            z-index: 0;
+            opacity: 0.25;
+            transform: translate(25%, -50%);
+        }
+    }
+}
+
+.stats__btn-container {
+    display: none;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 23rem;
+    z-index: 1;
+
+    .btn {
+        &:nth-child(1) {
+            float: left;
+        }
+
+        &:nth-child(2) {
+            float: right;
+        }
+    }
+
+    @include bp($tablet-bp){
+        display: block;
+    }
+}

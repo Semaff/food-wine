@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    @@include("html/head.html", {
+        "title": "Works",
+    })
+</head>
+<body>
+
+<div class="page">
+
+<!-- Header -->
+@@include('./html/header.html', {})
+
+<!-- SideBar -->
+@@include('./html/sidebar.html', {})
+
+    <!-- Main Content -->
+<div class="main">
+    <div class="container">
+        
+    </div> <!-- /.container -->
+</div> <!-- /.main -->
+
+</div> <!-- /.page -->
+
+<!-- Modal Blocks -->
+@@include('./story-modal.html', {})
+@@include('./contact-modal.html', {})
+@@include('./share-modal.html', {})
+
+<!-- JS -->
+<script src="js/app.min.js"></script>
+    
+</body>
+</html>

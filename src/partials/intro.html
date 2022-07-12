@@ -1,0 +1,93 @@
+<div class="intro">
+
+    <!-- Slider -->
+    <div class="slider  --absolute">
+        <div class="slide  --op">
+            <img src="assets/images/intro/{{ intro }}.png" alt="{{ intro }}">
+        </div>
+
+        {{#ifpage 'index'}}
+        <div class="slide  --op">
+            <img src="assets/images/intro/2.png" alt="2">
+        </div>
+
+        <div class="slide  --op">
+            <img src="assets/images/intro/3.png" alt="3">
+        </div>
+        {{/ifpage}}
+    </div>
+
+    <!-- Intro -->
+    <div class="intro__inner">
+        <div class="container">
+
+            {{#ifpage 'index'}}
+            <div class="intro__header  --extended">
+                <div class="decoration  --intro">
+                    <button type="button" class="btn  --left disabled" data-intro="left"></button>
+                    <span class="decoration__line"></span>
+                </div>
+
+                <div class="intro__title">
+                    Food & wine
+
+                    <h2 class="intro__subtitle">
+                        The best place for any Wine lover to relax and
+                        unwind while enjoying a great food.
+                    </h2>
+                </div>
+
+                <div class="decoration  --intro">
+                    <span class="decoration__line"></span>
+                    <button type="button" class="btn" data-intro="right"></button>
+                </div>
+            </div>
+
+            <a href="#boardSection" class="intro__reservation">
+                <img src="assets/images/intro/flower.png" alt="flower">
+
+                <div class="intro__reservation-text">
+                    <p>make a reservation</p>
+                    <span class="arrow  --medium"></span>
+                </div>
+            </a>
+
+            <div class="intro__order">
+                <span class="decoration__line  --gold"></span>
+
+                <a href="#menuSection" class="rhombus  --intro">
+                    <div class="rhombus__text">
+                        <p>order food online</p>
+                        <span class="arrow  --medium"></span>
+                    </div>
+                </a>
+
+                <span class="decoration__line  --gold"></span>
+            </div>
+            {{/ifpage}}
+
+            {{#unlesspage 'index'}}
+            <div class="intro__header">
+                <div class="decoration  --mw300">
+                    <div class="rectangle"></div>
+                    <span class="decoration__line"></span>
+                </div>
+
+                <div class="intro__title">
+                    {{ title }}
+
+                    <h2 class="intro__subtitle">
+                        HOME | {{ link }} | {{ title }}
+                    </h2>
+                </div>
+
+                <div class="decoration  --mw300">
+                    <span class="decoration__line"></span>
+                    <div class="rectangle"></div>
+                </div>
+            </div>
+            {{/unlesspage}}
+
+        </div> <!-- /.container -->
+    </div> <!-- /.intro -->
+</div> <!-- /.section -->

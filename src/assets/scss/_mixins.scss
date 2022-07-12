@@ -1,0 +1,6 @@
+// BreakPoints
+@mixin bp($bp) {
+    @media screen and (max-width: $bp) {
+        @content;
+    }
+}

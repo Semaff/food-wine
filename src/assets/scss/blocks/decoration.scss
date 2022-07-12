@@ -1,0 +1,69 @@
+.decoration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    &.--intro {
+        @include bp($tablet-bp) {
+            display: none;
+        }
+    }
+
+    &.--grey {
+        .decoration__line,
+        .rectangle {
+            background-color: #343434;
+        }
+    }
+
+    &.--direction {
+        gap: 10px;
+
+        &.--mw60 {
+            gap: 0;
+            margin: 4rem auto;
+        }
+
+        @include bp($tablet-bp){
+            max-width: 300px;
+            margin: 0 auto;
+
+            &.--mw60 {
+                max-width: 60px;
+            }
+        }
+    }
+
+    &.--small {
+        gap: 0;
+        margin: 4rem auto;
+    }
+}
+
+.decoration__line {
+    display: block;
+    background-color: $secondary;
+    width: 100%;
+    height: 1px;
+
+    &.--half-fade {
+        background: $bg-halffade;
+    }
+
+    &.--transparent {
+        background: $bg-transparent;
+    }
+
+    &.--secondary {
+        background-color: rgba(#fff, 0.1);
+    }
+
+    &.--gold {
+        background-color: $primary;
+    }
+
+    @include bp($mobile-bp){
+        max-width: 200px;
+    }
+}

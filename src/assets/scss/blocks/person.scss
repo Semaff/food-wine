@@ -1,0 +1,70 @@
+.person {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.person__header {
+    text-align: center;
+}
+
+.person__title {
+    font-size: 3rem;
+    font-family: $font-secondary;
+    font-weight: 300;
+    color: $white;
+}
+
+.person__prof {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: $white;
+
+    letter-spacing: 0.1em;
+}
+
+.person__image {
+    display: flex;
+    flex-direction: column;
+
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.person__photo {
+    display: block;
+    max-width: 100%;
+    height: auto;
+
+    width: 374px;
+    max-height: 375px;
+}
+
+.person__info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    padding: 2rem;
+    background-color: #000;
+}
+
+.person__text {
+    width: 100%;
+    max-width: 95rem;
+    text-align: center;
+    margin: 0 auto;
+
+    p {
+        font-size: 1.4rem;
+        font-family: $font-secondary;
+        line-height: 1.5;
+        color: $secondary;
+
+        margin-bottom: 2.5rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

@@ -1,0 +1,147 @@
+.board {
+    position: relative;
+    overflow: hidden;
+
+    @include bp($tablet-bp) {
+        overflow: auto;
+    }
+}
+
+.board__reservation {
+    visibility: hidden;
+    opacity: 0;
+
+    position: absolute;
+    z-index: 2;
+    padding: 7rem 15rem;
+
+    width: 100%;
+    background: $bg-primary;
+    border: $border-primary;
+
+    transition: opacity .3s ease-in-out;
+
+    @include bp($tablet-bp){
+        padding: 2rem;
+    }
+
+    span {
+        font-size: 1.4rem;
+        font-family: $font-secondary;
+        color: $secondary;
+    }
+}
+
+.board__title {
+    text-align: center;
+    font-size: 1.8rem;
+    font-family: $font-primary;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $white;
+    letter-spacing: 0.15em;
+
+    margin-bottom: 3rem;
+}
+
+.board__forms {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    @include bp($tablet-bp){
+        .form {
+            flex-direction: column;
+            max-width: 40rem;
+        }
+    }
+}
+
+.board__main {
+    position: relative;
+
+    width: 1170px;
+    min-height: 540px;
+    background: url(../images/table/table.png) center no-repeat;
+}
+
+.board__container {
+    display: flex;
+    align-items: center;
+
+    position: absolute;
+    z-index: 1;
+
+    &.--center {
+        gap: 90px;
+
+        right: 29px;
+        top: 9px;
+    }
+
+    &.--first {
+        flex-direction: column;
+        gap: 90px;
+
+        left: 58px;
+        top: 62px;
+    }
+
+    &.--last {
+        align-items: flex-start;
+        gap: 35px;
+
+        top: 206px;
+        left: 192px;
+    }
+
+    &.--one {
+        bottom: 36px;
+        left: 309px;
+    }
+}
+
+.board__container-row {
+    display: flex;
+    flex-direction: column;
+    gap: 77px;
+}
+
+.board__item {
+    cursor: pointer;
+
+    font-family: "Merriweather Sans", sans-serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: #000;
+
+    border: 0;
+    padding: 0;
+    margin: 0;
+    border-radius: 2px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: $primary;
+
+    &:hover {
+        background-color: darken($primary, 10%);
+    }
+
+    &.--center {
+        width: 54px;
+        height: 122px;
+    }
+
+    &.--first {
+        width: 60px;
+        height: 78px;
+    }
+
+    &.--last {
+        width: 82px;
+        height: 50px;
+    }
+}

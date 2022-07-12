@@ -1,0 +1,110 @@
+.socials {
+    margin-top: 3rem;
+    text-align: center;
+
+    &.--mt0 {
+        margin-top: 0;
+    }
+}
+
+.socials__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.socials__button {
+    cursor: pointer;
+    min-width: 16rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    border: none;
+    padding: 1rem 2.5rem;
+    background: none;
+
+    font-size: 1.4rem;
+    font-family: inherit;
+    font-weight: 700;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+
+    transition: background-color .2s linear;
+
+    &.--blue {
+        background-color: $blue;
+
+        &:hover {
+            background-color: darken($blue, 10%);
+        }
+    }
+
+    &.--lightblue {
+        background-color: $lightblue;
+
+        &:hover {
+            background-color: darken($lightblue, 10%);
+        }
+    }
+
+    &.--red {
+        background-color: $red;
+
+        &:hover {
+            background-color: darken($red, 10%);
+        }
+    }
+}
+
+.socials__btn-icon {
+    color: $white;
+}
+
+.socials__title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: $white;
+
+    margin-bottom: 1rem;
+}
+
+.socials__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    list-style: none;
+}
+
+.socials__item {
+    cursor: pointer;
+    width: 3rem;
+    height: 3rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: background-color .2s linear;
+
+    &:hover {
+        background-color: $primary;
+
+        .socials__icon {
+            color: #000;
+        }
+    }
+}
+
+.socials__icon {
+    color: $primary;
+    font-size: 1.8rem;
+
+    transition: color .2s linear;
+}
