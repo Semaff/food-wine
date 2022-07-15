@@ -1,6 +1,7 @@
 # food-wine
 This project was made by using Gulp Task Manager, main goal was to layout all the pages and made them functional. Technologies (HTML, CSS, JS, GULP). Total pages - 30
 
+Check it out: https://semaff.github.io/food-wine/
 
 ![1](https://user-images.githubusercontent.com/95703321/177371377-48b34cd4-a131-45e0-8134-bdb844795b4b.jpg)
 
